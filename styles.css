@@ -28,7 +28,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-
     background-size: cover;
     background-position: center;
     transition: transform 2s ease, background-image 0.5s ease;
@@ -78,15 +77,38 @@
     color: #fff;
 }
 
-.Bands-item.active{
+.Bands-item.active {
     opacity: 1;
-    transition: scale(1.1);
 }
 
 .Bands-item.inactive {
     opacity: 0.3;
 }
 
+
+
+/* Media Query para tablet (pantallas de 768px a 1024px) */
+@media (max-width: 1024px) {
+    .Pages {
+        padding: 30px;
+    }
+
+    .Bands {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 2.5rem;
+        margin: 50px;
+    }
+
+    .Bands-name {
+        font-size: 4.5rem; /* Ajusta el tamaño de la fuente para pantallas de tablet */
+    }
+
+    .Bands-category {
+        font-size: 0.9rem; /* Ajuste el tamaño de la categoría */
+    }
+}
+
+/* Media Query para móvil */
 @media (max-width: 768px) {
     .Pages {
         flex-direction: column;
@@ -108,39 +130,6 @@
         font-size: 2.5rem;
     }
 
-    .Background-container {
-        background-size: cover;
-        background-position: center;
-        
-    }
 }
 
-/* Para pantallas entre 768px y 1024px (tablets en modo vertical y horizontal) */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .Pages {
-        padding: 20px;
-    }
 
-    .Bands {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 1.5rem; 
-        margin: 50px 20px; 
-    }
-
-    .Bands-item {
-        text-align: left; 
-    }
-
-    .Bands-name {
-        font-size: 3.5rem; 
-    }
-
-    .Bands-category {
-        font-size: 0.9rem; 
-    }
-
-    .Background-container {
-        background-size: cover;
-        background-position: center;
-    }
-}
