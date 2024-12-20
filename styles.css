@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Pages {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+    transition: transform 2s ease, background-image 0.5s ease;
+    z-index: -1;
+}
+
+.Background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Bands {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    z-index: 1;
+    margin: 100px;
+}
+
+.Bands-item {
+    text-align: left;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.Bands-name {
+    font-size: 6rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Bands-category {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.Bands-item:hover .Bands-name {
+    color: #fff;
+}
+
+.Bands-item.active{
+    opacity: 1;
+    transition: scale(1.1);
+}
+
+.Bands-item.inactive {
+    opacity: 0.3;
+}
