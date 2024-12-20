@@ -51,7 +51,7 @@
 .Bands {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* dos columnas por defecto en pantallas grandes */
+    grid-template-columns: repeat(4, 1fr); /* cuatro columnas por defecto en pantallas grandes */
     gap: 2rem;
     z-index: 1;
     margin: 100px;
@@ -99,7 +99,7 @@
 /* Media Query para pantallas grandes */
 @media (min-width: 1024px) {
     .Pages {
-        padding: 50px;
+        padding: 100px;
     }
 
     .Bands {
@@ -109,7 +109,7 @@
     }
 
     .Bands-name {
-        font-size: 6rem; /* Tamaño grande para pantallas grandes */
+        font-size: 5rem; /* Tamaño grande para pantallas grandes */
     }
 
     .Bands-category {
