@@ -2,7 +2,7 @@
 
 ## Prueba técnica de Maquetador Trainee - Laura Fernández Solano
 
-`Deberas` de realizar el diseño proporcionado en el vídeo eligiendo las imágenes que consideres y adaptándolas al propio diseño. Imitando todas las animaciones que estamos buscando.
+Deberas de realizar el diseño proporcionado en el vídeo eligiendo las imágenes que consideres y adaptándolas al propio diseño. Imitando todas las animaciones que estamos buscando.
 
 ### Requisitos técnicos
 
