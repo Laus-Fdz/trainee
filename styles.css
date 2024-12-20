@@ -95,7 +95,7 @@
 
     .Bands {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 3.5rem;
         margin: 20px 10px;
     }
 
@@ -111,5 +111,35 @@
         background-size: cover;
         background-position: center;
         
+    }
+}
+
+/* Para pantallas entre 768px y 1024px (tablets en modo vertical y horizontal) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .Pages {
+        padding: 20px;
+    }
+
+    .Bands {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5rem; 
+        margin: 50px 20px; 
+    }
+
+    .Bands-item {
+        text-align: left; 
+    }
+
+    .Bands-name {
+        font-size: 3.5rem; 
+    }
+
+    .Bands-category {
+        font-size: 0.9rem; 
+    }
+
+    .Background-container {
+        background-size: cover;
+        background-position: center;
     }
 }
