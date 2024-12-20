@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Contenedor principal */
 .Pages {
     position: relative;
     height: 100vh;
@@ -13,6 +14,7 @@
     justify-content: center;
 }
 
+/* Fondo */
 .Background {
     position: absolute;
     top: 0;
@@ -22,6 +24,7 @@
     overflow: hidden;
 }
 
+/* Contenedor de fondo con animación */
 .Background-container {
     position: absolute;
     top: 0;
@@ -34,6 +37,7 @@
     z-index: -1;
 }
 
+/* Capa oscura sobre el fondo */
 .Background-overlay {
     position: absolute;
     top: 0;
@@ -43,21 +47,24 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Estilo para la cuadrícula de las bandas */
 .Bands {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* dos columnas por defecto en pantallas grandes */
     gap: 2rem;
     z-index: 1;
     margin: 100px;
 }
 
+/* Estilo de cada banda */
 .Bands-item {
     text-align: left;
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Nombre de la banda */
 .Bands-name {
     font-size: 6rem;
     color: #fff;
@@ -67,48 +74,71 @@
     cursor: pointer;
 }
 
+/* Categoría de la banda */
 .Bands-category {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     color: #ccc;
 }
 
+/* Efecto al pasar el mouse */
 .Bands-item:hover .Bands-name {
     color: #fff;
 }
 
+/* Efecto al hacer clic o activar */
 .Bands-item.active {
     opacity: 1;
 }
 
+/* Cuando está inactivo */
 .Bands-item.inactive {
     opacity: 0.3;
 }
 
+/* Media Query para pantallas grandes */
+@media (min-width: 1024px) {
+    .Pages {
+        padding: 50px;
+    }
 
+    .Bands {
+        grid-template-columns: repeat(2, 1fr); /* Cuatro columnas */
+        gap: 3rem;
+        margin: 50px;
+    }
 
-/* Media Query para tablet (pantallas de 768px a 1024px) */
+    .Bands-name {
+        font-size: 6rem; /* Tamaño grande para pantallas grandes */
+    }
+
+    .Bands-category {
+        font-size: 1rem; /* Un tamaño más grande para la categoría */
+    }
+}
+
+/* Media Query para tablet (768px - 1024px) */
 @media (max-width: 1024px) {
     .Pages {
         padding: 30px;
     }
 
     .Bands {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablet */
         gap: 2.5rem;
         margin: 50px;
     }
 
     .Bands-name {
-        font-size: 4.5rem; /* Ajusta el tamaño de la fuente para pantallas de tablet */
+        font-size: 4.5rem; /* Ajuste de tamaño en tablet */
     }
 
     .Bands-category {
-        font-size: 0.9rem; /* Ajuste el tamaño de la categoría */
+        font-size: 0.9rem; /* Ajuste de tamaño en tablet */
     }
 }
 
-/* Media Query para móvil */
+/* Media Query para móviles (menos de 768px) */
 @media (max-width: 768px) {
     .Pages {
         flex-direction: column;
@@ -117,8 +147,8 @@
     }
 
     .Bands {
-        grid-template-columns: 1fr;
-        gap: 3.5rem;
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        gap: 3rem;
         margin: 20px 10px;
     }
 
@@ -127,9 +157,13 @@
     }
 
     .Bands-name {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Tamaño de texto más pequeño en móviles */
     }
 
+    .Bands-category {
+        font-size: 0.8rem; /* Tamaño de texto de categoría más pequeño */
+    }
 }
+
 
 
