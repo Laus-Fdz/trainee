@@ -104,12 +104,12 @@
 
     .Bands {
         grid-template-columns: repeat(2, 1fr); /* Cuatro columnas */
-        gap: 3rem;
+        gap: 1rem;
         margin: 50px;
     }
 
     .Bands-name {
-        font-size: 5rem; /* Tamaño grande para pantallas grandes */
+        font-size: 6rem; /* Tamaño grande para pantallas grandes */
     }
 
     .Bands-category {
