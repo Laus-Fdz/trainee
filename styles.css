@@ -85,3 +85,31 @@
 .Bands-item.inactive {
     opacity: 0.3;
 }
+
+@media (max-width: 768px) {
+    .Pages {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .Bands {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 20px 10px;
+    }
+
+    .Bands-item {
+        text-align: center;
+    }
+
+    .Bands-name {
+        font-size: 2.5rem;
+    }
+
+    .Background-container {
+        background-size: cover;
+        background-position: center;
+        
+    }
+}
